@@ -1,0 +1,45 @@
+{% extends 'movies/main.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    h1, p, a {
+        color: #242424;
+    }
+    .pic {
+        max-width: 400px;
+        max-height: 400px;
+        margin: 0 auto;
+        border-radius: 7px;
+    }
+</style>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+    <div class="col-md-5">
+        <div class="card card-body">
+            <img src="" class="pic" id="TEST">
+            <a></a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h1>Movie Name:<span id="MN">{{movie_name.name}}</span></h1>
+            <p>Description: {{movie_name.image}}</p>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<!--script type="text/javascript" src="{% static 'js/movies.json' %}"></script-->
+<script>
+    var elementH1 = document.getElementById('MN');
+    var elementimg = document.getElementById('TEST');
+    //Sator
+    if(elementH1.innerText == "Sator" || elementH1.innerText == "sator") {
+        elementimg.src = "{% static 'images/ids/01.png' %}";
+    }
+    //Satanic
+    if(elementH1.innerText == "Satanic" || elementH1.innerText == "satanic") {
+        elementimg.src = "{% static 'images/ids/02.png' %}"
+    }
+</script>
+{% endblock %}

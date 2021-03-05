@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<head>
+   <link rel="icon" href="{% static 'images/logo.jpg' %}">
+    <title>Django</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/color.css' %}">
+<link rel="stylesheet" href="{% static 'css/sizes.css' %}">
+
+<style>
+    @media screen and (min-width: 769px) {
+    .fa-bars {
+        display: none !important;
+        color: rgba(0, 0, 0, 0.0);
+        opacity: 0;
+    }
+    nav .links .fa-close {
+        display: none;
+    }
+}
+</style>
+
+<body style='background: url("{% static "images/hero-area.png" %}"); background-attachment: fixed'>
+    {% include 'movies/navbar.html' %}
+
+    {% block content %}
+
+
+    {% endblock %}
+    {% include 'movies/footer.html' %}
+    <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/fontawesome.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>

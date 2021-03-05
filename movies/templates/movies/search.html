@@ -1,0 +1,113 @@
+{% extends 'movies/main.html' %}
+{% load static %}
+{% block content %}
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script-->
+<!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"-->
+<br><br><br><br><br><br><br><br><br><br>
+
+<style>
+    th{ 
+    cursor: pointer;
+    color:#fff;
+        }
+
+td {
+    color: #f44336;
+}
+tr{
+    background: #242424;
+}
+
+#search-input {
+    border: 2px solid #f44336;
+    padding: 10px;
+    color: #f44336;
+    background: transparent;
+}
+#search-input::placeholder{
+    color: #f44336;
+}
+.jumbotron {
+    background: transparent !important;
+}
+img {
+    width: 100px;
+}
+tr:nth-child(1) {
+    margin-left: 300px !important;
+}
+</style>
+<div class="jumbotron text-align">
+<input id="search-input" type="text" placeholder="Filter Movies Here">
+</div>
+<table class="table table-striped bg-dark">
+    <tr  class="bg-info">
+        <th  data-colname="image-cover" data-order="desc">Image</th>
+        <th  class="bg-info" data-colname="name" data-order="desc">Movie Name</th>
+        <th  data-colname="age" data-order="desc">Genre</th>
+        <th  data-colname="birthdate" data-order="desc">Year Released</th>
+    </tr>
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+<script>
+var myArray = [
+    {'name':'Sator', 'age':'Horror', 'birthdate':'11/10/1989', 'image':'<img src="{% static "images/SATOR2.png" %}">'},
+    {'name':'Sweden', 'age':'Documentary', 'birthdate':'10/1/1989', 'image':'<img src="{% static "images/SATOR2.png" %}">'},
+    {'name':'Superman', 'age':'Fantasy', 'birthdate':'10/14/1990', 'image':'<img src="{% static "images/SATOR2.png" %}">'},
+    {'name':'King Arthur', 'age':'Fantasy', 'birthdate':'11/29/1993', 'image':'<img src="{% static "images/SATOR2.png" %}">'},
+    {'name':'Batman', 'age':'Action', 'birthdate':'3/12/1991', 'image':'<img src="{% static "images/SATOR2.png" %}">'},
+    {'name':'Erik the giants slayer', 'age':'Fantasy', 'birthdate':'10/31/1995', 'image':'<img src="{% static "images/SATOR2.png" %}">'},
+]
+
+
+$('#search-input').on('keyup', function(){
+var value = $(this).val()
+var data = searchTable(value, myArray)
+buildTable(data)
+})
+
+buildTable(myArray)
+
+function searchTable(value, data){
+var filteredData = []
+for(var i = 0;i < data.length; i++){
+value = value.toLowerCase()
+var name = data[i].name.toLowerCase()
+var genre = data[i].age.toLowerCase()
+if(name.includes(value) || genre.includes(value)){
+filteredData.push(data[i])
+}
+}
+return filteredData
+}
+
+
+
+
+   
+ 
+    
+function buildTable(data){
+    var table = document.getElementById('myTable')
+    table.innerHTML = ''
+    for (var i = 0; i < data.length; i++){
+        var colname = `name-${i}`
+        var colage = `age-${i}`
+        var colbirth = `birth-${i}`
+
+        var row = `<tr>
+                        <td>${data[i].image}</td>
+                        <td>${data[i].name}</td>
+                        <td>${data[i].age}</td>
+                        <td>${data[i].birthdate}</td>
+                   </tr>`
+        table.innerHTML += row
+    }
+}
+
+</script>
+{% endblock %}

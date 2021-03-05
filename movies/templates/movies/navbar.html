@@ -1,0 +1,70 @@
+{% load static %}
+<style>
+
+nav {
+    padding: 20px;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    background: linear-gradient(to bottom right, rgba(50, 90, 120, 0.9),rgba(190, 90, 50, 0.9));
+    box-shadow: -20px 30px 4px #000;
+    padding-left: 560px;
+    padding-right: 150px;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    margin-top: -30px;
+    margin-right: -6%;
+    border-bottom-left-radius: 100px;
+    z-index: 1;
+}
+nav .fa-bars {
+    font-size: 30px;
+    padding: 10px;
+}
+
+nav .links a {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #00147221;
+    background: rgb(0, 147, 221);
+    box-shadow: 0 0 10px rgb(0, 147, 221);
+    color: rgb(248, 195, 0);
+    /*-webkit-text-stroke-color: #000 !important;
+    -webkit-text-stroke-width: 1px;*/
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bolder;
+}
+nav .links #home {
+    padding-left: 12px;
+    padding-right: 14px;
+}
+nav .links a:hover {
+    background: rgba(203, 222, 230, 0.5);
+    color: #000;
+    text-decoration: none;
+    transition-duration: .3s;
+}
+nav img {
+    position: fixed;
+    top: 30px;
+    left: 100px;
+    width: 150px;
+    z-index: 3;
+}
+.nav .hello a {
+  background: transparent !important;
+}
+</style>
+  <nav>
+    <img src="{% static 'images/logoM.png' %}">
+    <span class="fa fa-bars" onclick="NavOpen()"></span>
+    <span class="links" id="#links">
+        <span class="fa fa-close"  onclick="NavClose()"></span>
+        <a href="/home/" id="home">Home</a>
+        <a href="/movie/" id="movies">Movies</a>
+        <a href="/browse/" id="browse">Browse</a>
+        <span class="hello"><a href="{% url 'user-page' %}" style="background: none; color: #c3c3c3; border:none;box-shadow:none;">Hello, {{request.user}}</a></span>
+        <a class="" href="{% url 'logout' %}">Logout</a>
+    </span>
+</nav>

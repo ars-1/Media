@@ -1,0 +1,275 @@
+{% extends 'movies/main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
+
+<div class="sectionOne">
+    <div class="box">
+        <img src="{% static 'images/slide1.png' %}">
+        <div class="content">
+            <h1>King Arthur: Legend Of The Sword</h1>
+            <p>The Born King, the hero of the Great Britian, whose father was betrayed 
+                and killed by his uncle and then he rise again and retake what was of
+                his right...
+            </p>
+            <a class="fa fa-star"></a>
+            <a class="fa fa-star"></a>
+            <a class="fa fa-star"></a>
+            <a class="fa fa-star"></a>
+            <a class="fa fa-star"></a>
+
+            <br><br><br>
+            <h2>Storyline</h2>
+            <p>The Story Starts a long time ago in the Kingdom of old Britian and cities
+                under it. When it's King was awarded a sword by a magician known as
+                merlin. Kings brother was jealous and tried to overtook the sword And
+                the kingdom so he killed his brother but he realizes he can't have
+                the sword as the sword now belongs to.....
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="backG">
+<br><br><br><br><br><br><br>
+<div class="headingM">
+    <h1><a class="fa fa-video"></a>Movies And TV Shows
+        <span class="Cat_Types">
+        <a class="other">All</a>
+        <a class="other">Hollywood</a>
+        <a class="other">Lollywood</a>
+        <a class="other">Bollywood</a>
+        </span>
+    </h1>
+</div>
+<!-- Rows And Columns -->
+<hr>
+<br><br><br>
+<div class="row">
+    <div class="col-md-2 col-md-2p1" style="background-color: #242424;box-shadow: 30px 30px 4px #000;">
+        <div class="paded">
+            <p>Latest</p>
+            <li><a>King Arthur: The Return</a></li>
+            <li><a>Kong Vs. Godzilla</a></li>
+            <li><a>Penny The Time</a></li>
+            <li><a>The Time</a></li>
+            <hr>
+            <br>
+        </div>
+        <div class="paded">
+            <p>Trending</p>
+            <li><a>Flash: The Movie</a></li>
+            <li><a>Underground</a></li>
+            <li><a>Boy Lived Though</a></li>
+            <li><a>Super Bowl</a></li>
+            <hr>
+            <br>
+        </div>
+        <div class="paded">
+            <p>Popular</p>
+            <li><a>Undisputed 4</a></li>
+            <li><a>Now You See Me 2</a></li>
+            <li><a>Rogue</a></li>
+            <li><a>War</a></li>
+            <hr>
+            <br>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle fa-spin" onclick="nameeds12()"></a>
+                    </div> 
+                    <div class="zoom">
+                      <img src="{% static 'images/SATOR2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a>
+                        <br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds13()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds14()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-4 firstMove">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds15()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds16()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds17()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="row">
+            <div class="col-md-4 firstMove">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds18()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds19()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="HoverI">
+                    <div class="opacity">
+                        <a class="fas fa-play-circle" onclick="nameeds20()"></a>
+                    </div>
+                    <div class="zoom">
+                        <img src="{% static 'images/video/video2.png' %}">
+                    </div>
+                    <div class="MRating">
+                        <a>Movie One</a><br>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                        <a class="fa fa-star"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br>
+<div class="headingM">
+    <h1><a class="fa fa-film"></a>Trailers And Extras</h1>
+</div>
+<hr>
+<br><br><br>
+<div class="row mainTrailer">
+    <div class="col-md-8">
+        <img src="{% static 'images/news/news2.jpg' %}" width="100%" height="120%">
+    </div>
+    <div class="col-md-3">
+        <img src="{% static 'images/video/video3.png' %}" width="200">
+    </div>
+</div>
+
+</div>
+<div class="PopOut" id="VideoPop1">
+    <a class="fa fa-close" onclick="nameedsEX()"></a>
+    <video controls="">
+        <source type="video/mp4" id="Src" src="{% static 'images/movies/Sator1080-2019.mp4 ' %}">
+    </video>
+    <!--iframe src="https://youtube.com/embed/8_Yz2hUmfIU"></iframe-->
+</div>
+
+
+
+
+{% endblock %}
