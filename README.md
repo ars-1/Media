@@ -16,7 +16,8 @@
   - pip install django-filter
   <br>
   <br>
-
+please make sure you have pasted your secret key inside media/settings.py, thankyou.
+  <br>
 ### Contribution
 ##### Contribute Freely To This Project And Upgrade It Please, Thankyou
 
